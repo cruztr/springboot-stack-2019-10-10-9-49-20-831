@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  */
 @RestController
 @RequestMapping("/employees")
-public class HelloResource {
+public class EmployeeController {
 
     private final Logger log = Logger.getLogger(this.getClass().getName());
     private List<Employee> employeeList = new ArrayList<>();
