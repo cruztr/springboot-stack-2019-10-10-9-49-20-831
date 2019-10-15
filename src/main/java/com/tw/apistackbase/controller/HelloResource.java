@@ -23,6 +23,11 @@ public class HelloResource {
         return employeeList;
     }
 
+    @GetMapping(path = "/{employeeId}", produces = {"application/json"})
+    public Employee getAll(@PathVariable int employeeId) {
+        return getEmployeeUsingId(employeeId);
+    }
+
     @PostMapping(path = "/add", produces = {"application/json"})
     public ResponseEntity<String> addEmployee(@RequestBody List<Employee> employeeList){
         this.employeeList.addAll(employeeList);
